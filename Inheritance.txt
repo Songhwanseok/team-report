@@ -1,0 +1,61 @@
+https://youtu.be/jWeQ0dWhijw
+상속에 관한 간략한 설명에 관한 유튜브 링크입니다.
+
+ 첨부파일로 저희가 회의하던 사진을 첨부했습니다.
+
+ 
+
+소감
+
+오늘 상속에 대한 학습을 하면서, 새로운 것을 배울 수 있어서 좋았습니다.
+
+심재창 교수님의 더 알기 쉽고 친근하게 다가가는 수업방식이 수업의 집중도를 높여주고 C++에 대해 이해가 더 쉽게 되는거 같아서 좋았습니다.
+
+예전에 첫 팀 과제를 했던 조원들과 또 이렇게 팀 과제를 하게 됐는데,
+
+이번 과제를 하면서 더 많이 소통하며 서로 부족한 것을 채우고, 상속에 대해 잘 알게 된 것 같아 좋았습니다.
+
+또 이렇게 상속에 대한 유튜브 영상을 만드는 교수님의 색다른 과제 스타일이 좋았고
+
+처음엔 너무 어려워서 이해가 잘 안되었지만 팀을 짜서 같이 하니 혼자 했을 때보다 좀 더 공부가 되었던 것 같습니다. 아직 잘 이해 안되는 부분이 있지만 팀원들과 함께 좀 더 열심히 공부하도록 하겠습니다.
+
+ 
+
+ 
+
+예제로 사용한 코드
+
+#include <iostream>
+using namespace std;
+class CComputer{
+private:
+bool isTurnOn = false;
+public:
+void TurnOn();
+void TurnOff();
+void Display();
+};
+class CLaptop:public CComputer
+{
+private:
+double battery=100.0;
+public:
+void ShowBattery();
+};
+
+int main(void)
+{
+CLaptop myLaptop;
+myLaptop.TurnOn();
+myLaptop.ShowBattery();
+myLaptop.Display();
+myLaptop.TurnOff();
+return 0;
+}
+
+void CComputer::TurnOn(){ isTurnOn=true;}
+void CComputer::TurnOff(){ isTurnOn=false;}
+void CComputer::Display(){if(isTurnOn){ cout<<"Hello!"<<endl;}}
+void CLaptop::ShowBattery(){ cout << "battery : "<<battery << endl;}
+
+ 
